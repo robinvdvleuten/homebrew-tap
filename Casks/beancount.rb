@@ -3,7 +3,7 @@ cask "beancount" do
   name "beancount"
   desc "A fast, lightweight Beancount parser and formatter written in Go"
   homepage "https://github.com/robinvdvleuten/beancount"
-  version "0.1.0"
+  version "0.2.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,29 @@ cask "beancount" do
   on_macos do
     on_intel do
       url "https://github.com/robinvdvleuten/beancount/releases/download/v#{version}/beancount_Darwin_x86_64.tar.gz"
-      sha256 "190ce38a70417cbed544a24552b050caf73025448eb86301c34728d9c7b0b5f2"
+      sha256 "c0a85c54604884f2b6a2d746fba56c0f7af7ee00f232f746d0b329d77f1983ed"
     end
     on_arm do
       url "https://github.com/robinvdvleuten/beancount/releases/download/v#{version}/beancount_Darwin_arm64.tar.gz"
-      sha256 "3a221a4a077f0bc273f889cabaaab0436f702f684f3a84003f5f754f74d923d7"
+      sha256 "c340a0173e50e89b944f947757e2bf464b5260b7800c8aecbde825c01c10a506"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/robinvdvleuten/beancount/releases/download/v#{version}/beancount_Linux_x86_64.tar.gz"
-      sha256 "9b7bf64e5f53c6199dc9872f10f507b8f9539691ab2d8d44588e8dd6fb1aa9b3"
+      sha256 "b75f332aa6351fd0a95d27f893a35edbd987dfa3c345bc1cffe44ea99e4f3aee"
     end
     on_arm do
       url "https://github.com/robinvdvleuten/beancount/releases/download/v#{version}/beancount_Linux_arm64.tar.gz"
-      sha256 "74e4d4811ac59700749a7c6bf63e9370ac3189108ce0c7b014eb680d248f38c7"
+      sha256 "104c0c11f894ec7ae1b24142c70b9cd6191425a9fd3d4ae450465bd68f5d5b87"
+    end
+  end
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr",
+        args: ["-dr", "com.apple.quarantine", "#{staged_path}/beancount"]
     end
   end
 

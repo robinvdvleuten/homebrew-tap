@@ -14,22 +14,22 @@ cask "beancount" do
   on_macos do
     on_intel do
       url "https://github.com/robinvdvleuten/beancount/releases/download/v#{version}/beancount_Darwin_x86_64.tar.gz"
-      sha256 "270568a903392ba3607788541b558c003a07174faf56210a684939fbe2e4fd85"
+      sha256 "190ce38a70417cbed544a24552b050caf73025448eb86301c34728d9c7b0b5f2"
     end
     on_arm do
       url "https://github.com/robinvdvleuten/beancount/releases/download/v#{version}/beancount_Darwin_arm64.tar.gz"
-      sha256 "64c852592934e76e0d7c7b413ef46ebb1b2ac1cf5ca5920ea328b05d5c535777"
+      sha256 "3a221a4a077f0bc273f889cabaaab0436f702f684f3a84003f5f754f74d923d7"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/robinvdvleuten/beancount/releases/download/v#{version}/beancount_Linux_x86_64.tar.gz"
-      sha256 "65068cc55bc5343afed833435d1672973c68417671dcbbc0991499c8d3b00ee2"
+      sha256 "9b7bf64e5f53c6199dc9872f10f507b8f9539691ab2d8d44588e8dd6fb1aa9b3"
     end
     on_arm do
       url "https://github.com/robinvdvleuten/beancount/releases/download/v#{version}/beancount_Linux_arm64.tar.gz"
-      sha256 "e1bfdbb6ee4c7f2fc801faa236987b907f7afb5ec78773b6f28dc3fe5e78541b"
+      sha256 "74e4d4811ac59700749a7c6bf63e9370ac3189108ce0c7b014eb680d248f38c7"
     end
   end
 

@@ -2,7 +2,7 @@
 cask "beancount" do
   name "beancount"
   desc "A fast, lightweight Beancount parser and formatter written in Go"
-  homepage "https://robinvdvleuten.nl"
+  homepage "https://github.com/robinvdvleuten/beancount"
   version "0.1.0"
 
   livecheck do
